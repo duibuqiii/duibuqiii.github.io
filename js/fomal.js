@@ -2788,13 +2788,13 @@ function createtime() {
   now.setTime(now.getTime() + 1000);
   
   // Voyager 1号开始计算的时间
-  var start = new Date("08/01/2022 00:00:00"); 
+  var start = new Date("2022/08/01 00:00:00");  // 修正日期格式: MM/DD/YYYY to YYYY/MM/DD
   // 计算距离
   var dis = Math.trunc(23400000000 + ((now - start) / 1000) * 17); 
   var unit = (dis / 149600000).toFixed(6);  // 转换为天文单位
 
   // 网站诞生时间
-  var grt = new Date("11/26/2024 00:00:00"); 
+  var grt = new Date("2024/11/26 00:00:00");  // 修正日期格式: MM/DD/YYYY to YYYY/MM/DD
   var days = (now - grt) / 1e3 / 60 / 60 / 24,
       dnum = Math.floor(days),
       hours = (now - grt) / 1e3 / 60 / 60 - 24 * dnum,
@@ -2815,6 +2815,7 @@ function createtime() {
     document.getElementById("workboard").innerHTML = currentTimeHtml;
   }
 }
+
 
 // 设置重复执行函数，周期1000ms
 setInterval(() => {
