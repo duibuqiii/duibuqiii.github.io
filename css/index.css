@@ -8082,6 +8082,11 @@ a:hover {
 #post .tag_share .post-meta__tags:hover {
   background: var(--theme-color) !important;
 }
+.post-copyright-info{
+  display: none;
+}
+
+
 #post .post-copyright .post-copyright-meta {
   color: var(--theme-color) !important;
 }
